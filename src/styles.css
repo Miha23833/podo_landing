@@ -145,10 +145,31 @@ h1 {
 
 .hero__lead {
   max-width: 620px;
-  margin-bottom: 34px;
+  margin-bottom: 22px;
   color: #303136;
   font-size: clamp(17px, 1.5vw, 21px);
   line-height: 1.45;
+}
+
+.hero__tags {
+  display: flex;
+  max-width: 620px;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 30px;
+  padding: 0;
+  list-style: none;
+}
+
+.hero__tags li {
+  padding: 9px 13px;
+  border: 1px solid #d5d8e3;
+  border-radius: 999px;
+  color: #303136;
+  background: #f8f9fc;
+  font-size: 13px;
+  font-weight: 550;
+  line-height: 1;
 }
 
 .button {

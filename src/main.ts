@@ -1,6 +1,6 @@
 import './styles.css';
 import portraitUrl from './assets/lawyer-placeholder.jpg';
-import { contact, services, trustPoints, workSteps } from './content';
+import { contact, heroCaseTags, services, trustPoints, workSteps } from './content';
 import { icon } from './icons';
 
 const serviceCards = services
@@ -54,9 +54,12 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       <div class="hero__content">
         <div>
           <p class="eyebrow">Юридическая помощь</p>
-          <h1 id="hero-title">Юрист по<br />гражданским делам</h1>
-          <p class="hero__city">${contact.city}</p>
-          <p class="hero__lead">Помогаю защитить ваши права и интересы в спорах, найти законное решение и добиться результата.</p>
+          <h1 id="hero-title">Юрист Дмитрий<br />Подопригора</h1>
+          <p class="hero__city">Гражданские дела в г. ${contact.city}</p>
+          <p class="hero__lead">Разбираю спор, определяю правовую позицию, готовлю документы и представляю ваши интересы в суде и на переговорах.</p>
+          <ul class="hero__tags" aria-label="Частые вопросы">
+            ${heroCaseTags.map((tag) => `<li>${tag}</li>`).join('')}
+          </ul>
           <a class="button button--primary" href="#contact">
             Разобрать ситуацию
             ${icon('arrow')}
